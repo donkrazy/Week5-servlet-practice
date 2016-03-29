@@ -11,18 +11,18 @@
 	GuestbookListDAO dao = new GuestbookListDAO(new MySQLWebDBConnection());
 	if (dao.delete(id, password)) {
 %>
-	<script>
+	<script type='text/javascript'>
 		alert("삭제 성공");
+		window.location.assign("/");
 	</script>
 <%
-		//response.sendRedirect("/");
 	} else {
 %>
-	<script>
+	<script type='text/javascript'>
 		alert("삭제 실패");
+		window.location.assign("/");
 	</script>
 <%
-		//response.sendRedirect("/");
 	}
 %>
 
